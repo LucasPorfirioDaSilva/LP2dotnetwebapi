@@ -16,7 +16,7 @@ namespace lanchonete.Controllers
             _context = context;
             if (_context.pedidos.Count() == 0)
             {
-                _context.pedidos.Add(new Pedido { fun_id = 1, pid = 1 , pqtde = 2 });
+                _context.pedidos.Add(new Pedido { fun_id = 2, pid = 1 , pqtde = 2 });
                 _context.pedidos.Add(new Pedido { fun_id = 0, pid = 5, pqtde = 2 });
                 _context.pedidos.Add(new Pedido { fun_id = 2, pid = 6, pqtde = 2 });
                 _context.pedidos.Add(new Pedido { fun_id = 3, pid = 2, pqtde = 2 });

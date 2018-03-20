@@ -14,9 +14,17 @@ namespace lanchonete.Controllers
         public PedidoProdutoController(DataContext context)
         {
             _context = context;
+            if( _context.pedidoproduto.Count() == 0)
+                {
+                    _context.pedidoproduto.Add(new PedidoProduto { Pedidoid =4 ,Produtoid=3 ,pqtde=10 });
+                    _context.pedidoproduto.Add(new PedidoProduto { Pedidoid =4 ,Produtoid=2 ,pqtde=5 });
+                    _context.pedidoproduto.Add(new PedidoProduto { Pedidoid =2 ,Produtoid=3 ,pqtde=6 });
+                    _context.pedidoproduto.Add(new PedidoProduto { Pedidoid =2 ,Produtoid=1 ,pqtde=2 });
+                    _context.pedidoproduto.Add(new PedidoProduto { Pedidoid =4 ,Produtoid=5 ,pqtde=3 });
+                    _context.SaveChanges();
+                }
 
         }
-
 
         [HttpGet]
         public IEnumerable<PedidoProduto> GetAll()
