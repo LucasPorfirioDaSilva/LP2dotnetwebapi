@@ -9,9 +9,9 @@ namespace lanchonete.Models
         }
 
         public DbSet<Fornecedor> fornecedores { get; set;}
-    /*  public DbSet<Produto> produtos { get; set;}
+        public DbSet<Produto> produtos { get; set;}
         public DbSet<Funcionario> funcionarios { get; set; }
         public DbSet<Pedido> pedidos { get; set;}
-        public DbSet<PedidoProduto> pedidoproduto { get; set;}  */
+        public DbSet<PedidoProduto> pedidoproduto { get; set;}  
     }
 }
